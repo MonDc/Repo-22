@@ -1,0 +1,759 @@
+@import 'mixins';
+
+$pp: '.sc'; // Plugin prefix
+
+$bg_primary: #FEF5EF;
+$bg_secondary: #584B53;
+$bg_wrong: #ffb9c3;
+
+$btn_primary: #E4BB97;
+$border: #D6E3F8;
+$border_hover: #9D5C63;
+$border_correct: #73dd43;
+$border_wrong: #dd1531;
+
+//status background
+$status_success: #cef6bc;
+$status_error: #ffb0b3;
+
+$font_color_primary: #212121;
+$font_color_secondary: #fff;
+
+//misc
+$ripple_color: #aeaeae;
+
+html {
+    //font-size: 14px;
+	//
+    //@media (max-width: 1399px) {
+    //    font-size: 13px;
+    //}
+	//
+    //@media (max-width: 1199px) {
+    //    font-size: 12px;
+    //}
+    //
+    //@media (max-width: 991px) {
+    //    font-size: 11px;
+    //}
+	//
+    //@media (max-width: 767px) {
+    //    font-size: 11px;
+    //}
+
+    /*
+    @media (max-width: 499px) {
+        font-size: 14px;
+    }
+    */
+
+    &.overflown {
+        overflow: hidden;
+    }
+}
+
+/*
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: #ddd;
+    overflow-x: hidden;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*/
+
+%read_more_button {
+    color: $border_hover;
+
+    &:hover, &:active, &:focus {
+        color: lighten($border_hover, 15%);
+    }
+}
+
+%read_more_body {
+    @extend %smaller_text_section;
+
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: 300;
+    text-align: justify;
+
+    a {
+        color: $border_hover;
+        text-decoration: none;
+
+        &:hover, &:active, &:focus {
+            color: lighten($border_hover, 15%);
+        }
+    }
+}
+
+%smaller_text_section {
+    font-size: 0.7em;
+    color: lighten($font_color_primary, 50%);
+}
+
+#{$pp} {
+    &_tg_btn {
+        position: fixed;
+        bottom: 4rem;
+        right: 4rem;
+        width: 68px; //64px;
+        height: 68px; //64px;
+        opacity: 1;
+        z-index: 10000;
+
+        -webkit-animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        animation-duration: 2s;
+
+        @include transition(ease-in-out, 0.3s);
+
+        &.left {
+            right: auto;
+            left: 4rem;
+        }
+
+        &.hide {
+            bottom: -4rem;
+            opacity: 0;
+        }
+
+        @media (max-width: 991px) {
+            bottom: 2rem;
+            right: 2rem;
+            width: 59px; //56px;
+            height: 59px; //56px;
+
+			border-width: 3px;
+
+            &.left {
+                right: auto;
+                left: 2rem;
+            }
+        }
+        @media (max-width: 767px) {
+            bottom: 1rem;
+            right: 1rem;
+            width: 50px; //48px;
+            height: 50px; //48px;
+
+			border-width: 2px;
+
+            &.left {
+                right: auto;
+                left: 1rem;
+            }
+        }
+    }
+    &_round_container {
+		position: relative;
+        width: 100%;
+        height: 100%;
+
+		//border: solid 4px $bg_secondary;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        background: #a2d6ff; //$bg_primary;
+
+		z-index: 1;
+
+        #{$pp}_icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent url(../img/phone_w.png);
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+            background-position: center center;
+            
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+	&_ripple {
+		width: 110%; //64px;
+		height: 110%; //64px;
+		left: -5%;
+		top: -5%;
+		border-color: $ripple_color;
+		z-index: 0;
+
+		&, &::before, &::after {
+			display: block;
+			position: absolute;
+			border: 2px solid #fff;
+			-webkit-border-radius: 50%;
+			-webkit-animation: ripple 2s ease-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-delay: 0.4s;
+			opacity: 0;
+		}
+		//&::before {
+		//	content: "";
+		//	height: 130%; //72px;
+		//	width: 130%; //72px;
+		//	left: -18%;
+		//	top: -18%;
+		//}
+		&::after {
+			content: "";
+			height: 150%; //px;
+			width: 150%; //92px;
+			left: -27%;
+			top: -27%;
+		}
+	}
+	&_ripple2 {
+		width: 150%;
+		height: 150%;
+		z-index: 0;
+
+		& {
+			display: block;
+			position: absolute;
+			top: -17px;
+			left: -17px;
+			background: #fff;
+			-webkit-border-radius: 50%;
+			-webkit-animation: ripple2 2s ease-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-delay: 0.4s;
+			opacity: 0;
+
+			@media (max-width: 991px) {
+				top: -15px;
+				left: -15px;
+			}
+			@media (max-width: 767px) {
+				top: -13px;
+				left: -13px;
+			}
+		}
+	}
+
+	&_tg_btn_container {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		max-width: 100%;
+		height: 68px;
+		margin-left: 1rem;
+		padding: 0 68px;
+		background: #86b2da;
+		@include border-radius(34px);
+		@include transition(ease-in-out, 0.3s);
+		z-index: 10000;
+
+		&.hide {
+			bottom: -4rem;
+			opacity: 0;
+		}
+
+		@media (max-width: 991px) {
+			height: 59px; //56px;
+			@include border-radius(29px);
+		}
+		@media (max-width: 767px) {
+			width: 50px; //48px;
+			height: 50px; //48px;
+			padding: 0;
+			@include border-radius(25px);
+		}
+
+		#{$pp}_tg_btn_text {
+			position: relative;
+			top: 50%;
+			left: calc(50% - 17px);
+			margin: 0;
+			color: #fff;
+			text-align: center;
+			@include transform(translate(-50%, -50%));
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		#{$pp}_tg_btn {
+			position: absolute;
+			top: 0;
+			bottom: auto;
+			left: auto;
+			right: 0;
+		}
+	}
+
+    /* ----------- */
+
+    &_overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: auto;
+        background: rgba(0,0,0,0.5);
+        z-index: 9999;
+    }
+
+    &_popup_container {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 12px; //offset used for containing the close button
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+		@import 'general_overwrite';
+    }
+
+    &_popup {
+        position: relative;
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        background: $bg_primary;
+
+        font-family: 'Oswald', sans-serif;
+        color: $font_color_primary;
+        line-height: 1.5;
+
+        p {
+            margin: 0;
+			color: inherit;
+        }
+
+        #{$pp}_btn_close {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            right: -12px;
+            top: -12px;
+            margin: 0;
+            padding: 0;
+
+            background: transparent url(../img/close.svg);
+            border: none;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+
+            cursor: pointer;
+			outline: none;
+
+            @include transform(scale(0.9));
+            @include transition(ease-out transform, 0.3s);
+
+            &:hover, &:focus, &:active {
+                @include transform(scale(1));
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                top: 0;
+            }
+        }
+
+        #{$pp}_title_section {
+            padding: 2rem;
+        }
+
+        #{$pp}_title_section {
+            background: $bg_secondary;
+
+            color: $font_color_secondary;
+            font-size: 1.5em;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        #{$pp}_body_section, #{$pp}_footer_section {
+            p {
+                margin: 0 0 1rem 0;
+                font-weight: 300;
+                font-size: inherit;
+            }
+        }
+
+		#{$pp}_body_section {
+            padding: 2rem 2rem 0.5rem 2rem;
+		}
+
+        #{$pp}_footer_section {
+            padding: 1rem 2rem 1rem 2rem;
+            text-align: center;
+
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.success {
+                background: $status_success;
+            }
+            &.error {
+                background: $status_error;
+            }
+        }
+
+        #{$pp}_division {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            .input {
+                //icon on the right side of the input
+                .icon {
+                    &.wrong-input {
+                        display: none;
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 12px;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
+                }
+
+                //status underneath input
+                #{$pp}_status {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+
+                    padding: 0.3rem 0; //0.5rem;
+                    background: transparent;
+
+                    text-align: left; //center;
+                    color: inherit;
+
+                    //&::before {
+                    //    content: "";
+                    //    display: block;
+                    //    position: absolute;
+                    //    left: 50%;
+                    //    top: 0;
+                    //    border: solid 0.5rem transparent;
+					//
+                    //    @include transform(translateX(-50%));
+                    //}
+                }
+
+                &.wrong-input {
+                    .icon {
+                        &.wrong-input {
+                            display: block;
+                        }
+                    }
+
+                    #{$pp}_status {
+                        //background: $bg_wrong;
+                        color: $border_wrong;
+
+                        //&::before {
+                        //    border-top-color: darken($bg_wrong, 10%);
+                        //}
+                    }
+                }
+            }
+
+            input[type="text"], input[type="tel"], input[type="email"], input[type="url"], textarea {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+
+                margin: 0;
+                padding: 0 0 0.5rem 0;
+
+                background: transparent;
+                border: none;
+                border-bottom: solid 2px $border;
+
+                line-height: 1.5rem;
+
+                outline: none;
+
+                @include transition(ease-in-out, 0.3s);
+
+                &:hover, &:active, &:focus {
+                    border-color: $border-hover;
+                }
+
+                &::-webkit-input-placeholder {
+                    color: lighten($font_color_primary, 50%);
+                }
+                &:-moz-placeholder {
+                    /* FF 4-18 */
+                    color: lighten($font_color_primary, 50%);
+                }
+                &::-moz-placeholder {
+                    /* FF 19+ */
+                    color: lighten($font_color_primary, 50%);
+                }
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: lighten($font_color_primary, 50%);
+                }
+
+                &.correct-input {
+                    border-color: $border_correct;
+                }
+                &.wrong-input {
+                    border-color: $border_wrong;
+                }
+            }
+            input[type="tel"], input.jsm_phone {
+                letter-spacing: 1px;
+            }
+
+			#{$pp}_btn {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+
+                padding: 0.5em 1em;
+
+                border: none;
+                background: $btn_primary;
+                color: $font_color_secondary;
+                font-size: 1.5rem;
+                font-weight: 500;
+                font-family: inherit;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                cursor: pointer;
+                outline: none;
+
+                @include transition(ease-in-out, 0.3s);
+
+                &:hover {
+                    background: lighten($btn_primary, 10%);
+                    color: $font_color_primary;
+                }
+            }
+
+            #{$pp}_agreements {
+                #{$pp}_checkbox_container {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 2rem;
+                    margin: 0;
+
+                    input {
+                        margin: 0;
+                        visibility: hidden;
+
+                        &.wrong-input ~ .checkmark {
+                            border: solid 2px $border_wrong;
+                        }
+
+                        &:checked ~ .checkmark {
+                            background-color: $btn_primary;
+
+                            &:after {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    /* Create a custom checkbox */
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-color: #eee;
+                        cursor: pointer;
+
+                        @include transition(ease-in-out background, 0.3s);
+
+                        /* Create the checkmark/indicator (hidden when not checked) */
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+
+                            left: 50%;//8px;
+                            top: 50%;//4px;
+                            width: 5px;
+                            height: 10px;
+                            border: solid white;
+                            border-width: 0 3px 3px 0;
+
+                            -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                            -moz-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                            -ms-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                            -o-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                            transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                        }
+                    }
+
+                    &:hover {
+                        input ~ .checkmark {
+                            background-color: #ccc;
+                        }
+                    }
+                }
+
+				label {
+                    @extend %smaller_text_section;
+				}
+
+                label {
+                    display: inline-block;
+                    min-height: 1.5rem;
+                    margin-bottom: 0;
+                    margin-left: 2rem;
+
+                    font-weight: 300;
+
+                    cursor: pointer;
+
+                    a {
+                        color: $border_hover;
+                        text-decoration: none;
+
+                        &:hover, &:active, &:focus {
+                            color: lighten($border_hover, 15%);
+                        }
+                    }
+                }
+
+                p {
+                    display: inline;
+                    font-size: inherit;
+                }
+            }
+        }
+
+		#{$pp}_body_content_section {
+			text-align: center;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		#{$pp}_readmore {
+			@extend %read_more_button;
+		}
+		#{$pp}_readmore_body {
+			@extend %smaller_text_section;
+			@extend %read_more_body;
+		}
+
+        //overwrite some bootstrap styles
+        @import '_bootstrap_overwrite';
+    }
+}
+
+/* --- */
+
+@-webkit-keyframes ripple {
+	0% {
+		-webkit-transform: scale(.1,.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1.2,1.2);
+		opacity: 0;
+	}
+}
+
+@keyframes ripple {
+	0% {
+		transform: scale(.1,.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.2,1.2);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes ripple2 {
+	0% {
+		-webkit-transform: scale(.1,.1);
+		opacity: 0.4;
+	}
+
+	50% {
+		opacity: 0.6;
+	}
+
+	100% {
+		-webkit-transform: scale(1.2,1.2);
+		opacity: 0;
+	}
+}
+
+@keyframes ripple2 {
+	0% {
+		transform: scale(.1,.1);
+		opacity: 0.4;
+	}
+
+	50% {
+		opacity: 0.6;
+	}
+
+	100% {
+		transform: scale(1.2,1.2);
+		opacity: 0;
+	}
+}

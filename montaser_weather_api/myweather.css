@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(19, 88, 17, 0.377);
+}
+
+
+.middle {
+    position: absolute;
+    top: 50vh;
+    left: 50vh;
+
+}

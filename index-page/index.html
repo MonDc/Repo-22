@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Montasir Mohamed - web develpers</title>
+
+
+
+
+	<!-- Jquery -->
+	<script src="jquery-3.4.0.min.js"> </script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+	<!-- WOW js -->
+	<!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+			crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+		crossorigin=""></script>
+	<!-- Input mask -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js" type="text/javascript"></script> -->
+	<!-- Animate css -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+	<!-- Main -->
+	<script src="SwyftCallback-master/src/js/swyft_callback.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="SwyftCallback-master/src/css/style.css">
+	<!-- /Main -->
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500&amp;subset=latin-ext" rel="stylesheet">
+	<!-- <style type="text/css">
+        body {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            background: #ddd;
+            overflow-x: hidden;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style> -->
+
+
+
+
+
+	<script src="lightbox.js"></script>
+	<script src="custom.js"></script>
+	<script src="main.js"></script>
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+	<script src="popper.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+
+	<link rel="stylesheet" href="other_css_library/arrow.css">
+	<link rel="stylesheet" href="other_css_library/lightbox.css">
+	<link rel="stylesheet" href="other_css_library/fixed.css">
+	<link rel="stylesheet" href="other_css_library/owl.carousel.css">
+	<link rel="stylesheet" href="other_css_library/owl.theme.default.css">
+	<!-- <link rel="stylesheet" href="other_css_library/animate.css"> -->
+	<script src="owl.carousel.js"></script>
+
+	<link rel="stylesheet" href="css/fixed.css">
+	<!-- <link href="./Simple-Animated-Image-Caption-Plugin-For-jQuery-imageTitle (1)/Simple-Animated-Image-Caption-Plugin-For-jQuery-imageTitle/css/_imageTitle.css" rel="stylesheet"> -->
+
+
+
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Montaser Mohamed Halboob</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<p style="padding-top: 2rem;"> I am a front-end and back-end developer. I am currentyl getting
+						trained as a web
+						developer at DCI; Digital
+						Career
+						Institute Hamburg. I am a javascript specialist. I am able to work in differenct technologies
+						like Javascript, CSS, SAAS, HTML, jQuery, Bootstrap, NodeJs, React and data bases like
+						Mongo. i participated in
+						multiple events and workshops. I am currently applying to have job in tech as a web develper.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+					<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+					<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Start Home Section  -->
+	<div id="home">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="index.html"><img src="img/fbw.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#team">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+
+				</ul>
+			</div>
+
+
+		</nav>
+
+		<!-- Start Image Slider -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+				</li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1" class="active">
+				</li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2" class="active">
+				</li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<!-- slide 1 -->
+				<div class="carousel-item active" style="background-image: url(img/cbreakers.jpg);">
+					<div class="carousel-caption">
+						<h1>Welcome to my Page</h1>
+						<h3>websites that shine</h3>
+						<a class="btn btn-outline-light btn-lg" href="#portfolio">Get Started</a>
+					</div>
+				</div>
+				<!-- slide 2 -->
+				<div class="carousel-item" style="background-image: url(img/cbreakers1.jpg);">
+				</div>
+				<!-- slide 3 -->
+				<div class="carousel-item" style="background-image: url(img/cbreakers2.jpg);">
+				</div>
+			</div>
+			<!-- End Carousel Inner -->
+
+			<!-- prev & next buttons -->
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			</a>
+
+
+
+
+			<!-- End Image Slider -->
+
+		</div>
+		<!-- End Home Section  -->
+
+
+
+		<!--- Start Portfolio Section -->
+		<div id="portfolio" class="offset">
+
+			<div class="row padding">
+
+				<div class="col-12 os-animation" data-animation="fadeInUp">
+					<h3 class="heading">Portfolio</h3>
+					<div class="heading-underline"></div>
+
+				</div>
+
+			</div>
+			<div class="col-12 narrow text-center">
+				<p class="lead">In this section you can navigate through my projects to have a closer look at the area
+					I develpe my applications. You can further explore my showcase by going directly to the relative
+					projects!</p>
+			</div>
+
+			<!--- End Row -->
+
+			<!--- Start Portfolio Grid -->
+			<div class="container-fluid">
+				<div class="row no-padding">
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInLeft" data-delay=".2s">
+							<div class="portfolio-item">
+								<a href="img/portfolio/1.png" data-lightbox="example-set" data-title='API- project with javascript hard coding. &nbsp; &nbsp;More...&nbsp; <a href="../montaser_photos-biggest/index.html" target="_blank" > <i
+										class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+
+									<img class="example-image" src="img/portfolio/1.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInLeft">
+							<div class="portfolio-item">
+								<a href="img/portfolio/2.png" data-lightbox="example-set" data-title='Weather API- project with pure javascript coding. &nbsp; &nbsp;More...&nbsp; <a href="../montaser_weather_api/myweather.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/2.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInRight">
+							<div class="portfolio-item">
+								<a href="img/portfolio/3.png" data-lightbox="example-set" data-title='Calculator done by JS and CSS with classic font style. &nbsp; &nbsp;More...&nbsp; <a href="../montaser-calculator_project_js/index.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/3.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInRight" data-delay=".2s">
+							<div class="portfolio-item">
+								<a href="img/portfolio/4.png" data-lightbox="example-set" data-title='Code Breakers team of this website. &nbsp; &nbsp;Home ...&nbsp; <a href="#home" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/4.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInLeft" data-delay=".2s">
+							<div class="portfolio-item">
+								<a href="img/portfolio/5.png" data-lightbox="example-set" data-title='Website from scratch. &nbsp; &nbsp;More...&nbsp; <a href="../wisam/index.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/5.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInLeft">
+							<div class="portfolio-item">
+								<a href="img/portfolio/6.png" data-lightbox="example-set" data-title='Thunder strikes with rain effects. &nbsp; &nbsp;More...&nbsp; <a href="../karrar/index.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/6important.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInRight">
+							<div class="portfolio-item">
+								<a href="img/portfolio/7.png" data-lightbox="example-set" data-title='Photos using API xml method. &nbsp; &nbsp;More...&nbsp; <a href="../ahmad_api_photos/index.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/7important.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3">
+						<div class="os-animation" data-animation="bounceInRight" data-delay=".2s">
+							<div class="portfolio-item">
+								<a href="img/portfolio/8.png" data-lightbox="example-set" data-title='Google map API with customized marker. &nbsp; &nbsp;More...&nbsp; <a href="../google_map_API/index.html" target="_blank" > <i
+									class="fas fa-project-diagram" style="font-size:2.8rem; padding-top:1.6rem; color:#FBBC05;"></i></a>'>
+									<img class="example-image" src="img/portfolio/8.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!--- End Row -->
+			</div>
+			<!--- End Container -->
+			<!--- End Portfolio Grid -->
+
+			<div class="os-animation" data-animation="fadeInUp">
+				<div class="narrow text-center">
+					<div class="col-12">
+						<p class="lead">You can contact me to explore more of my projects. Please don't hesitate to
+							write to me in case u would like to have alook at my recent showcase. Write or leave your
+							number or
+							Email so I can reach you.</p>
+						<a class="btn btn-secondary btn-md" href="#contact">Get In Touch</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--- End of Portfolio Section -->
+
+
+		<!--- Start services Section -->
+		<div id="services" class="offset">
+			<!-- start jumbotron -->
+			<div class="jumbotron">
+				<div class="narrow">
+					<div class="os-animation" data-animation="fadeInUp">
+						<h3 class="heading">Services</h3>
+						<div class="heading-underline"></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInLeft">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fas fa-mobile-alt fa-inverse"
+											data-fa-transform="shrink-6 right-.25"></i>
+									</span>
+									<h3>Mobile Friendly</h3>
+									<p>We use website layout with responsive features that fit for any mbile device.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInUp">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fas fa-desktop fa-inverse" data-fa-transform="shrink-8 left-1"></i>
+									</span>
+									<h3>Full Screen Landing</h3>
+									<p>Features from differnet technologies allow us create beautiful landing pages.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInRight">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fas fa-play fa-inverse" data-fa-transform="shrink-9 right-.9"></i>
+									</span>
+									<h3>Animation Customization</h3>
+									<p>Nice animation using different libraries is included, for example waypoints.js
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInLeft">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fas fa-angle-double-down fa-inverse"
+											data-fa-transform="shrink-5 down .3"></i>
+									</span>
+									<h3>Parallax Scrolling</h3>
+									<p>A great background image feature to make page contents scrolling smoothly.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInUp">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fas fa-sliders-h fa-inverse"
+											data-fa-transform="shrink-8.5 right-.2"></i>
+									</span>
+									<h3>Content Slider</h3>
+									<p>Best libraries used like oql.carousel.js and others to make sliders within the
+										page.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="os-animation" data-animation="fadeInRight">
+								<div class="services">
+									<span class="fa-layers fa-4x">
+										<i class="fa fa-circle"></i>
+										<i class="fab fa-wpforms fa-inverse"
+											data-fa-transform="shrink-6.5 right-.1"></i>
+									</span>
+									<h3>Contact Form</h3>
+									<p>Using bootstrap or other techniques to design contact forms for
+										developers.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--end row-->
+
+				</div>
+				<!--end narrow-->
+			</div>
+			<!-- end jumbotron -->
+
+			<div class="col-12 narrow text-center">
+				<a class="btn btn-gold btn-md" href="#contact" target="_blank">Request more info.
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<!--- End services Section -->
+
+
+
+	<!-- Start Team Section  -->
+	<div id="team" class="offset">
+		<!-- start fixex background light -->
+		<div class="fixed-background">
+			<div class="row light">
+				<div class="col-12 os-animation" data-animation="fadeInUp">
+					<h3 class="heading">me and my colleagues</h3>
+					<div class="heading-underline"></div>
+				</div>
+				<div class="col-md-12">
+					<div class="os-animation" data-animation="fadeInUp">
+						<div id="team-slider" class="owl-carousel owl-theme">
+
+
+
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/montaser.jpg" alt="">
+								<div class="card-body">
+									<h4>Montasir Mohamed H.</h4>
+									<h5> Web Developer</h5>
+									<p>I am a web developer, designer and javascrip specialist. I am qualified for
+										working in the tech industry.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+									<a class="more" onclick="showModal(1)">More ...</a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/basel.jpg" alt="">
+								<div class="card-body">
+									<h4>Basel Zaghmut </h4>
+									<h5> Web Developer</h5>
+									<p>Basel is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/wisam.jpg" alt="">
+								<div class="card-body">
+									<h4>Wisam Bashir </h4>
+									<h5> Web Developer</h5>
+									<p>Wisam is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/karrar.jpg" alt="">
+								<div class="card-body">
+									<h4>Karrar Bayati </h4>
+									<h5> Web Developer</h5>
+									<p>Karrar is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+
+								</div>
+							</div>
+
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/david.jpg" alt="">
+								<div class="card-body">
+									<h4>David Agyemang </h4>
+									<h5> Web Developer</h5>
+									<p>David is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/omar.jpg" alt="">
+								<div class="card-body">
+									<h4>Omar Belal </h4>
+									<h5> Web Developer</h5>
+									<p>Omar is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/haji.jpg" alt="">
+								<div class="card-body">
+									<h4>Mohamed Haji Abdi </h4>
+									<h5> Web Developer</h5>
+									<p>Mohamed is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/mojtaba.jpg" alt="">
+								<div class="card-body">
+									<h4>Mojtaba Zagar </h4>
+									<h5> Web Developer</h5>
+									<p>Mojtaba is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/nicklas.jpg" alt="">
+								<div class="card-body">
+									<h4>Niklas Mohr </h4>
+									<h5> Web Developer</h5>
+									<p>Niklas is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/hussein.jpg" alt="">
+								<div class="card-body">
+									<h4>Hossein Niko</h4>
+									<h5> Web Developer</h5>
+									<p>Hossein is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/petros.jpg" alt="">
+								<div class="card-body">
+									<h4>Petros paulos </h4>
+									<h5> Web Developer</h5>
+									<p>Petros is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/alperen.jpg" alt="">
+								<div class="card-body">
+									<h4>Alperen Oskan </h4>
+									<h5> Web Developer</h5>
+									<p>Alperen is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/mohamed.jpg" alt="">
+								<div class="card-body">
+									<h4>Mohamad albakr </h4>
+									<h5> Web Developer</h5>
+									<p>Mohammed is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/abood.jpg" alt="">
+								<div class="card-body">
+									<h4>Abullah Algamad</h4>
+									<h5> Web Developer</h5>
+									<p>Abdullah is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/maha.jpg" alt="">
+								<div class="card-body">
+									<h4>Maha Kaleh </h4>
+									<h5> Web Developer</h5>
+									<p>Maha is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/amir.jpg" alt="">
+								<div class="card-body">
+									<h4>Amir Reza Rajabi </h4>
+									<h5> Web Developer</h5>
+									<p>Amir is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/farooq.jpg" alt="">
+								<div class="card-body">
+									<h4>Faroq Fazly </h4>
+									<h5> Web Developer</h5>
+									<p>Faroq is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+								</div>
+							</div>
+
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/nour.jpg" alt="">
+								<div class="card-body">
+									<h4>Mohamad Nour Mustafa </h4>
+									<h5> Web Developer</h5>
+									<p>Mohamed is a web developer, designer and javascrip specialist. He is
+										working as front end developer.</p>
+									<a href="https://www.facebook.com" target="_blank"> <i
+											class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com" target="_blank"> <i
+											class="fab fa-instagram"></i></a>
+									<a href="https://www.xing.com" target="_blank"> <i class="fab fa-xing"></i></a>
+
+
+
+
+								</div>
+
+							</div>
+
+
+						</div>
+						<!--end team slider-->
+
+					</div>
+
+					<!--end animation-->
+
+				</div>
+				<!--end of col-md-12-->
+
+			</div>
+			<!--end of row light-->
+			<div class="fixed-wrap">
+				<div id="fixed-2">
+
+				</div>
+			</div>
+
+		</div>
+
+		<!-- End of Row -->
+	</div>
+	<!-- End team Section  -->
+
+
+	<!-- Start Contact Section  -->
+
+	<div id="contact" class="offset">
+
+
+		<footer>
+
+			<div class="container mapbasel" id="mapid" style="height: 380px; width: 100%;  margin-bottom: 50px">
+			</div>
+
+			<div class="cont">
+
+				<div class="container ">
+					<div id="element"></div>
+				</div>
+			</div>
+
+
+			<div class="row justify-content-center">
+				<!-- <div class="col-content-center"> -->
+				<div class="col-md-5 text-center">
+					<img src="img/fbw.png">
+					<p> My aim is to make a cutting egde wesite that fulfill the cutting egde wesite that
+						fulfill the need of my clients.
+					</p>
+
+					<strong> Contact Info</strong>
+					<p> 0157/ 77482288 <br> montasir.mhmd.al@gmail.com </p>
+
+					<a href="https://www.facebook.com/Code-Breakers-408432973322461/?modal=admin_todo_tour"
+						target="_blank">
+						<i class="fab fa-facebook-square"> </i>
+					</a>
+					<a href="https://twitter.com/Esam46191388" target="_blank"> <i class="fab fa-twitter-square">
+						</i>
+					</a>
+					<a href="https://www.instagram.com/codebreackers/" target="_blank"> <i class="fab fa-instagram">
+						</i> </a>
+				</div>
+
+
+				<!-- </div> -->
+				<hr class="socket">
+				&copy;Montasir Mohamed.
+
+
+			</div>
+			<!-- End of Row -->
+		</footer>
+
+	</div>
+	<!-- End Contact Section  -->
+
+
+	<!--- Script Source Files -->
+
+	<script src="bootstrap-4/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+	<!--- End of Script Source Files -->
+
+</body>
+
+</html>
